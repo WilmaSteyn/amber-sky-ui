@@ -1,0 +1,8 @@
+<div *ngIf="!busy">
+  <app-trip *ngFor="let trip of trips" [trip]="trip"></app-trip>
+</div>
+<div id="loadingMsg" *ngIf="busy">
+  <div>Loading... </div><img src="assets/img/loading_5.gif"/>
+</div>
+<div style="clear: both"></div>
+

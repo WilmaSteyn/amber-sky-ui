@@ -1,0 +1,40 @@
+.topnav {
+  overflow: hidden;
+  background-color: #292929;
+  /*  position: relative;*/
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a:hover {
+  background-color: #292929;
+  color: white;
+}
+
+.topnav a.icon {
+  background: #292929;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 2em;
+}
+
+.topnav #myLinks {
+  position: absolute;
+  top: 90px;
+  z-index: 1;
+  right: 10px;
+  background-color: #212520;
+  width: 200px;
+}
+
+#headerImg {
+  max-width: calc(100% - 60px);
+}

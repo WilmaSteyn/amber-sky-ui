@@ -1,0 +1,53 @@
+<div class="description">
+  <h1 class="description">These are the mammal and bird species we have spotted on our visits to various natural areas</h1>
+  <div class="heading">Legend</div>
+  <div class="description legend linked" >&nbsp;</div>
+  <div class="bodyText speciePhoto" style="float: left; font-weight: bold">Species for which there are photos in the galleries (Click specie name to view photo)</div>
+  <div style="clear:both"></div>
+
+  <div class="description legend unlinked">&nbsp;</div>
+  <div class="bodyText" style="float: left; font-weight: bold">Species for which there are no photos in the galleries yet</div>
+  <div style="clear:both"></div>
+</div>
+
+  <div class="description">
+    <div class="heading">Mammals</div>
+    <div *ngIf="!busy">
+      <div class='group' *ngFor="let group of mammalGroups">
+        <h1><span class='group_name'>{{group.name}}</span>&nbsp;&nbsp;{{group.desciption}}</h1>
+        <div class='species'>
+          <p class='bodyText' *ngFor="let specie of group.species">
+            <span class='speciePhotoNr' *ngIf="hasPhotoLink(specie.photo)">{{getNextMammalCount()}}. </span>
+            <a *ngIf="hasPhotoLink(specie.photo)" class='speciePhoto' name='modal' (click)="open(specie.photo)">{{specie.name}}</a>
+            <span *ngIf="!hasPhotoLink(specie.photo)">{{getNextMammalCount()}}. {{specie.name}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="loadingMsg" *ngIf="busy">
+      <div>Loading... </div><img src="assets/img/loading_5.gif"/>
+    </div>
+
+    <h1 style='margin-left: 30px'>Total species: {{getTotalMammals()}}</h1>
+
+    <div class="heading">Birds</div>
+    <div *ngIf="!busy">
+      <div class='group' *ngFor="let group of birdGroups; let i = index">
+        <h1><span class='group_name'>{{group.name}}</span>&nbsp;&nbsp;{{group.description}}</h1>
+        <div class='species'>
+          <p class='bodyText' *ngFor="let specie of group.species">
+            <span class='speciePhotoNr' *ngIf="hasPhotoLink(specie.photo)">{{getNextBirdCount()}}. </span>
+            <a *ngIf="hasPhotoLink(specie.photo)" class='speciePhoto' name='modal' (click)="open(specie.photo)">{{specie.name}}</a>
+            <span *ngIf="!hasPhotoLink(specie.photo)">{{getNextBirdCount()}}. {{specie.name}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="loadingMsg" *ngIf="busy">
+      <div>Loading... </div><img src="assets/img/loading_5.gif"/>
+    </div>
+
+    <h1 style='margin-left: 30px'>Total species: {{getTotalBirds()}}</h1>
+
+    <div id="bottom_spacer"></div>
+  </div>

@@ -1,0 +1,16 @@
+<div class="trip_container">
+  <h1 id="title">{{trip.name}}</h1>
+  <div class="trip_detail">
+    <img class="icon" src="{{photoBasePath}}{{trip.featurePhotoFilename}}" /><br/>
+    <a [routerLink]="['/special-gallery', trip.pkSpecialGallery]">Trip Photo Gallery</a>
+  </div>
+  <div class="trip_blogs">
+    <span style="font-weight: bold; color: #EA972E">Blog Posts:</span>
+    <ol>
+      <li *ngFor="let blog of trip.blogs">
+        <a href="{{blog.url}}">{{blog.title}}</a>
+      </li>
+    </ol>
+  </div>
+  <div style="clear:both"></div>
+</div>

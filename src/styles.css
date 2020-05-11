@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+body {
+  margin: 0 0;
+  background-color: #292929;
+  /*background-image: url("assets/img/background.jpg");*/
+  /*background-position: 100% 70px;*/
+  /*background-repeat: no-repeat;*/
+  /*background-attachment: fixed;*/
+  color: #C6C6C6;
+  font-family:'Montserrat', sans-serif;
+  /*font-family: Arial, Helvetica;*/
+  font-size: 1em;
+  -webkit-text-size-adjust: none;
+}
+
+.header {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  max-height: 70px;
+  /*background: url(img/banner_IMG_6926sm.png);*/
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  width: calc(100% - 0.5em);
+  background-color: #292929;
+  z-index: 100;
+}
+
+.bodyText {
+  color: #C6C6C6;
+  text-align: left;
+  margin:0px 10px;
+  padding: 10px 0px;
+  font-size: 14px;
+}
+
+.description {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#navMenu {
+  /*font-family: NovecentowideNormal;*/
+  margin:0;
+  padding:0;
+  list-style:none;
+  text-align:center;
+  line-height:50px;
+
+  /* simulate pixel perfect using border */
+  border-top:1px solid #555;
+  border-bottom:0px;
+
+  height:50px;
+  max-height: 50px;
+  margin-bottom: 0px;
+  float: right;
+}
+
+@media all and (max-width:480px) and (orientation: portrait){
+  .desktop-view {display:none;}
+  .phone-view {display:block;}
+  .navButton {
+    float:left;
+
+    /* width and height of the menu item */
+    width:49%;
+    height:50px;
+
+    /* must set it as relative, because .hover class top and left with absolute position will be positioned according to li.    */
+    position:relative;
+  }
+}
+
+@media all and (max-width:480px) and (orientation: landscape){
+  .desktop-view {display:none;}
+  .phone-view {display:block;}
+
+  .navButton {
+    float:left;
+
+    /* width and height of the menu item */
+    width:24.5%;
+    height:50px;
+
+    /* must set it as relative, because .hover class top and left with absolute position will be positioned according to li.    */
+    position:relative;
+  }
+}
+
+@media screen and (min-width:481px) and (max-width:730px) {
+  .desktop-view {display:block;}
+  .phone-view {display:none;}
+
+  .navButton {
+    float:left;
+
+    /* width and height of the menu item */
+    width:24.5%;
+    height:50px;
+
+    /* must set it as relative, because .hover class top and left with absolute position will be positioned according to li.    */
+    position:relative;
+  }
+}
+
+
+@media screen and (min-width:731px) and (max-width:870px) {
+  .desktop-view {display:block;}
+  .phone-view {display:none;}
+
+  .navButton {
+    float:left;
+
+    /* width and height of the menu item */
+    width:100px;
+    height:50px;
+
+    /* must set it as relative, because .hover class top and left with absolute position will be positioned according to li.    */
+    position:relative;
+  }
+}
+
+@media screen and (min-width:871px) {
+  .desktop-view {display:block;}
+  .phone-view {display:none;}
+
+  .navButton {
+    float:left;
+
+    /* width and height of the menu item */
+    width:120px;
+    height:50px;
+
+    /* must set it as relative, because .hover class top and left with absolute position will be positioned according to li.    */
+    position:relative;
+  }
+}
+
+.navButton.selected a {
+  color: #EA972E;
+}
+
+.navButton a {
+  z-index: 20;
+  display:inline;
+  height:50px;
+  position:relative;
+  color:#C6C6C6;
+  margin-bottom: 100px;
+}
+
+a:hover  {
+  border-bottom: 1px solid #EA972E;
+  cursor: pointer;
+}
+
+a {
+  color: #C6C6C6;
+  text-decoration: none;
+}
+
+
+@media screen and (min-width:751px) {
+  div#content_inner {
+    min-height: 520px;
+    border-right: solid 2px #EA972E;
+    border-bottom: none 2px #EA972E;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    padding-top: 90px;
+    text-align: center;
+  }
+  div#content_outer {
+    border-right: solid 2px #EA972E;
+    border-bottom: solid 2px #292929;
+    margin: 0px 20px 0px 0px;
+  }
+  .footer {
+    color: white;
+    text-align:center;
+    font-size:0.8em;
+    /*font-family: NovecentowideNormal;*/
+    margin-top: 10px;
+    width: 100%;
+    border-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width:750px) and (min-width:480px) {
+  div#content_inner {
+    border-right: solid 2px #EA972E;
+    border-bottom: none 2px #EA972E;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    padding-top: 50px;
+    text-align: center;
+    min-height: 450px;
+  }
+  div#content_outer {
+    border-right: solid 2px #EA972E;
+    border-bottom: solid 2px #292929;
+    margin: 0px 2em 0px 0px;
+    /*		position: relative;
+        top: -155px;		*/
+  }
+  .footer {
+    color: white;
+    text-align:center;
+    font-size:1em;
+    /*font-family: NovecentowideNormal;*/
+    margin-top: 10px;
+    width: 100%;
+    border-top: 10px;
+    padding-bottom: 10px;
+    /*		position: relative;
+        top: -155px;		*/
+  }
+}
+
+@media screen and (max-width:479px) {
+  div#content_inner {
+    /*border-right: solid 2px #EA972E;*/
+    border-bottom: none 2px #EA972E;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    padding-top: 50px;
+    text-align: center;
+    min-height: 300px;
+  }
+  div#content_outer {
+    /*border-right: solid 2px #EA972E;*/
+    border-bottom: solid 2px #292929;
+    margin: 0px 20px 0px 0px;
+    /*		position: relative;
+        top: -155px;		*/
+  }
+  .footer {
+    color: white;
+    text-align:center;
+    font-size:0.8em;
+    /*font-family: NovecentowideNormal;*/
+    margin-top: 10px;
+    max-width: 100%;
+    border-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /*		position: relative;
+        top: -155px;		*/
+  }
+}
+
+div#bottom_spacer {
+  height: 22px;
+  background-color:#292929;
+  position:relative;
+  top:2px
+}
+
+.button {
+  /* height: 50px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  background-color: #393939;
+  margin: 10px;
+  border-right: 1px solid #C6C6C6;
+  border-bottom: 1px solid #C6C6C6;
+  width: expression( this.scrollWidth < 101 ? "100px" : "auto" );
+  cursor: pointer;
+}
+
+.button.selected {
+  border-right: 1px solid #EA972E;
+  border-bottom: 1px solid #EA972E;
+  color: #EA972E;
+}
+
+.button:hover  {
+  border-right: 1px solid #EA972E;
+  border-bottom: 1px solid #EA972E;
+}
+
+.centered {
+  text-align: center;
+}
+
+h1 {
+  font-size: 18px;
+  /*font-family: NovecentowideNormal;*/
+  font-weight: normal;
+  color: white;
+  text-align: left;
+  padding-left: 3px;
+}

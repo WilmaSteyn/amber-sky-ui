@@ -1,0 +1,8 @@
+<ul id="galleries_ul" class="menu_list desktop-view">
+  <a><li id="cat_all" class="button" [ngClass]="getSelectedClass(-1)" (click)="selectCategory(-1)">All</li></a>
+  <a *ngFor="let category of categories">
+    <li id="cat_{{category.pkCategory}}" class="button" [ngClass]="getSelectedClass(category.pkCategory)" (click)="selectCategory(category.pkCategory)">{{category.description}}</li>
+  </a>
+</ul>
+
+<app-thumbnail-masonry [photoCount]="photoCount" [busy]="busy" [photos]="photos" (loadMore)="loadMore()" #thumbnailMasonry></app-thumbnail-masonry>

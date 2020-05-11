@@ -1,0 +1,28 @@
+.menu_list {
+  list-style: none;
+  /* font-family: NovecentowideNormal; */
+  text-align: center;
+  line-height: 30px;
+  margin: 0px;
+  position: fixed;
+  top: 70px;
+  background-color: #292929;
+  width: calc(100% - 8em);
+  padding-top: 20px;
+  z-index: 100;
+}
+
+ul {
+  /*display: block;*/
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+li.button {
+  float: left;
+}
+

@@ -1,0 +1,54 @@
+.species {
+  -moz-column-width:250px; /* Firefox */
+  -webkit-column-width:250px; /* Safari and Chrome */
+  column-width:250px;
+
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap:20px;
+  -moz-break-inside: avoid-column;
+}
+
+.speciePhoto {
+  color: #F2BC79;
+}
+
+div.linked {
+  background-color: #F2BC79;
+}
+
+div.unlinked {
+  background-color: #C6C6C6;
+}
+
+div.legend {
+  width: 12px;
+  float: left;
+  margin-top: 10px;
+}
+
+div.heading {
+  color: #EA972E;
+  font-size: 21px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: left;
+  line-height: 1.3em;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #EA972E;
+  margin-top: 30px;
+}
+
+.group {
+  margin-left: 30px;
+  margin-right: 30px;
+  border-bottom: solid 1px #EA972E;
+  margin-bottom: 20px;
+}
+
+.group_name {
+  color: #EA972E;
+  font-variant: small-caps;
+}

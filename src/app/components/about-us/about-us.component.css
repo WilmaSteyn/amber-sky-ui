@@ -1,0 +1,27 @@
+@media screen and (min-width:481px) {
+  .about_pics {
+    width:20%;
+    float:left;
+  }
+
+  .about_content {
+    width:80%;
+    float:left;
+  }
+
+  .about_pic {
+    margin: 10px 10px 50px;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .about_pics {
+    width: 100%;
+  }
+
+  .about_pic {
+    float: left;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+}

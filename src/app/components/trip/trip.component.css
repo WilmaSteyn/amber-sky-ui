@@ -1,0 +1,113 @@
+#title {
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .trip_container {
+    width: 550px;
+    height: 240px;
+    float: left;
+    padding: 10px;
+    margin: 10px 10px 50px 30px;
+    border-bottom: 1px solid #C6C6C6;
+  }
+
+  .trip_container img {
+    max-width: 180px;
+    max-height: 180px;
+    display: table-cell;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .trip_detail {
+    display: table-cell;
+    max-width: 190px;
+  }
+
+  .trip_detail p {
+    text-align: left;
+  }
+
+  .trip_blogs {
+    padding-left: 20px;
+    text-align: left;
+    display: table-cell;
+    margin-top: 10px;
+    vertical-align: top;
+  }
+
+  .trip_container ol {
+    padding-left: 0px;
+    margin-left: 15px;
+  }
+
+  .trip_container li {
+    padding-right: 15px;
+    font-size: 0.95em;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .trip_container {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 10px 50px 30px;
+    border-bottom: 1px solid #C6C6C6;
+  }
+
+  .trip_container img {
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .trip_detail p {
+    text-align: left;
+  }
+
+  .trip_blogs {
+    padding-left: 20px;
+    text-align: left;
+    display: table-cell;
+    margin-top: 10px;
+    vertical-align: top;
+  }
+
+  .trip-blogs a {
+    line-height: 2em;
+  }
+
+  .trip_container ol {
+    padding-left: 0px;
+    margin-left: 15px;
+  }
+
+  .trip_container li {
+    padding-right: 15px;
+    /*font-size: 0.9em;*/
+  }
+}
+
+@media screen and (max-width:730px) {
+  .tripDetail {
+    float: left;
+  }
+}
+
+@media screen and (min-width:731px) {
+  .tripDetail {
+    height: 180px;
+    padding-left: 270px;
+  }
+}
+
+.blogList {
+  float:left;
+}
+
+.blogList li {
+  float:left;
+  padding-right: 15px;
+  margin-left: 15px;
+}

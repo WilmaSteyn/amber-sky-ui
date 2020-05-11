@@ -1,0 +1,30 @@
+<div id="lightgallery" >
+  <ng-masonry-grid [masonryOptions]="{ transitionDuration: '0.8s', gutter: 5, horizontalOrder: true }"
+                   [useAnimation]="true"
+                   [useImagesLoaded]="false"
+                   [scrollAnimationOptions]="{ animationEffect: 'effect-4', minDuration : 0.4, maxDuration : 0.7 }"
+                   (onNgMasonryInit)="onNgMasonryInit($event)" *ngIf="!switchingFilter">
+    <ng-masonry-grid-item id="{{'masonry-item-'+i}}" class="masonry-item img-hover-zoom" *ngFor="let photo of photoList; let i = index" #masonryItem>
+      <a name="modal" (mouseover)="showTitle(photo.pkPhoto)">
+        <img src="{{photoBasePath}}{{photo.filename}}" [src]="photoBasePath + photo.filename" alt="{{photo.title}}" (click)="open(i)" (load)="photoLoad()">
+      </a>
+      <div class='img-title-outer'>
+        <div class='img-title' id="thumb{{photo.pkPhoto}}" [ngStyle]="getTitleVisibilityStyle(photo.pkPhoto)">
+          <span class='btn'>{{photo.title}}</span><br/>
+          <span class='btn'>{{photo.galleryCode}}-{{photo.pkPhoto}}</span>
+        </div>
+      </div>
+    </ng-masonry-grid-item>  </ng-masonry-grid>
+
+  <div class="button-wrapper">
+    <div *ngIf="hasMorePhotos() && !isBusy">
+      <div id="loadMoreButton" class="button centered" (click)="doLoadMore()">Load more</div>
+    </div>
+    <div id="loadingMsg" *ngIf="isBusy">
+      <div>Loading... </div><img src="assets/img/loading_5.gif"/>
+    </div>
+    <div id="noMoreMsg" *ngIf="!hasMorePhotos() && !isBusy">No more photos available.</div>
+  </div>
+</div>
+
+
