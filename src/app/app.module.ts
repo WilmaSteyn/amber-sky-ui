@@ -23,7 +23,7 @@ import { SpecialGalleryComponent } from './components/special-gallery/special-ga
 import { SpeciesListComponent } from './components/species-list/species-list.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { NavHeaderComponent } from './components/nav-header/nav-header.component';
-import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -60,8 +60,8 @@ import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-br
       multi: true
     },
     {
-      provide: HAMMER_GESTURE_CONFIG,
-      useClass: MyHammerConfig
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
     }
   ],
   entryComponents: [ LightboxOverlayComponent, LightboxComponent ],

@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  apiLoacation: '/api/',
+  photoBasePath: '/',
+  photosPerPage: 30
 };

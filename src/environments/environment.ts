@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiLoacation: 'http://localhost:82/api/',
+  photoBasePath: 'http://localhost:82/',
+  photosPerPage: 10
 };
 
 /*
