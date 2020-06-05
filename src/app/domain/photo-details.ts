@@ -2,6 +2,7 @@ export class PhotoDetails {
 
   pkPhoto: number;
   filename: string;
+  thumbFilename: string;
   photographerName: string;
   location: string;
   date: string;

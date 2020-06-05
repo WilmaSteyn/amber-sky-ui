@@ -299,3 +299,7 @@ h1 {
   text-align: left;
   padding-left: 3px;
 }
+
+.cdk-overlay-container {
+  z-index: 10001;
+}

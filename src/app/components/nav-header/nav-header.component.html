@@ -1,16 +1,19 @@
 <div class="header">
-  <a routerLink="/"><img id="headerImg" src="assets/img/banner.png" alt="Amber Sky Creations"></a>
-  <ul id="navMenu" class="desktop-view">
-    <li class="navButton" id="portfolio" [ngClass]="getSelectedClass('portfolio')"><a routerLink="/">Portfolio</a></li>
-    <li class="navButton" id="blog" [ngClass]="getSelectedClass('blog')"><a href="/wordpress/">Blog</a></li>
-    <li class="navButton" id="trips" [ngClass]="getSelectedClass('trips')"><a (click)="routeTo('trips')">Trips</a></li>
-    <li class="navButton" id="species" [ngClass]="getSelectedClass('species')"><a (click)="routeTo('species')">Species List</a></li>
-    <li class="navButton" id="about" [ngClass]="getSelectedClass('about')"><a (click)="routeTo('about')">About us</a></li>
-  </ul>
-  <div class="topnav phone-view">
-    <a class="icon" (click)="showHamburgerMenu()">
-      <i class="fa fa-bars"></i>
-    </a>
+  <div id="headerImg">
+    <a routerLink="/" id="logo">Amber Sky Creations</a>
+  <!--<img id="headerImg" src="assets/img/banner.png" alt="Amber Sky Creations"></a>-->
+    <ul id="navMenu" class="desktop-view">
+      <li class="navButton" id="portfolio" [ngClass]="getSelectedClass('portfolio')"><a routerLink="/">Portfolio</a></li>
+      <li class="navButton" id="blog" [ngClass]="getSelectedClass('blog')"><a href="/wordpress/">Blog</a></li>
+      <li class="navButton" id="trips" [ngClass]="getSelectedClass('trips')"><a (click)="routeTo('trips')">Trips</a></li>
+      <li class="navButton" id="species" [ngClass]="getSelectedClass('species')"><a (click)="routeTo('species')">Species List</a></li>
+      <li class="navButton" id="about" [ngClass]="getSelectedClass('about')"><a (click)="routeTo('about')">About us</a></li>
+    </ul>
+    <div class="topnav phone-view">
+      <a class="icon" (click)="showHamburgerMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
   </div>
 </div>
 

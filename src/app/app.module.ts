@@ -23,7 +23,10 @@ import { SpecialGalleryComponent } from './components/special-gallery/special-ga
 import { SpeciesListComponent } from './components/species-list/species-list.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { NavHeaderComponent } from './components/nav-header/nav-header.component';
-import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { CopyrightNoticeComponent } from './components/copyright-notice/copyright-notice.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
     SpecialGalleryComponent,
     SpeciesListComponent,
     AboutUsComponent,
-    NavHeaderComponent
+    NavHeaderComponent,
+    CopyrightNoticeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +52,7 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
     HttpClientModule,
     NgxMasonryModule,
     NgMasonryGridModule,
+    MatDialogModule
   ],
   providers: [
     AppConstants,

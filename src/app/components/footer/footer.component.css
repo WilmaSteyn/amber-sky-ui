@@ -1,0 +1,13 @@
+.horz-line {
+  width:90%;
+  height: 2px;
+  border-bottom: 2px solid #EA972E;
+}
+
+.footer .copyright {
+  float: none;
+  font-size: 1em;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 0px;
+}

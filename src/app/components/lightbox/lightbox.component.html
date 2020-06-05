@@ -9,14 +9,15 @@
       <a class="lb-close" (click)="close($event)"></a>
       <a class="lb-fullscreen" (click)="fullscreen(currentImageIndex)"></a>
     </div>
+    <a class="copyright" (click)="showCopyright()">{{copyrightShort}}</a>
   </div>
 </div>
 <div class="lb-outerContainer transition" #outerContainer>
   <div class="lb-container" #container>
-    <img class="lb-image" [src]="photoBasePath + album[currentImageIndex].filename" class="lb-image animation fadeIn" [hidden]="ui.showReloader" #image>
+    <img class="lb-image" [src]="photoBasePath + album[currentImageIndex].filename" class="lb-image animation fadeIn" [hidden]="ui.showReloader" (contextmenu)="$event.preventDefault();showCopyright()" #image >
     <div class="lb-nav" [hidden]="!ui.showArrowNav" #navArrow>
-      <a class="lb-prev" [hidden]="!ui.showLeftArrow" (click)="prevImage()" #leftArrow></a>
-      <a class="lb-next"[hidden]="!ui.showRightArrow" (click)="nextImage()" #rightArrow></a>
+      <a class="lb-prev" [hidden]="!ui.showLeftArrow" (click)="prevImage()" (contextmenu)="$event.preventDefault();showCopyright()" #leftArrow></a>
+      <a class="lb-next"[hidden]="!ui.showRightArrow" (click)="nextImage()" (contextmenu)="$event.preventDefault();showCopyright()" #rightArrow></a>
     </div>
     <div class="lb-loader" [hidden]="!ui.showReloader" (click)="close($event)">
       <a class="lb-cancel"></a>

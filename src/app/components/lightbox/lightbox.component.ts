@@ -21,6 +21,8 @@ import {
 import {PhotoDetails} from '../../domain/photo-details';
 import {AppConstants} from '../../config/app-constants';
 import {FullscreenService} from '../fullscreen/services/fullscreen.service';
+import {MatDialog} from '@angular/material/dialog';
+import {CopyrightNoticeComponent} from "../copyright-notice/copyright-notice.component";
 
 @Component({
   templateUrl: './lightbox.component.html',
@@ -54,6 +56,7 @@ export class LightboxComponent implements OnInit, AfterViewInit, OnDestroy, OnIn
   private _windowRef: any;
   private _documentRef: Document;
   public photoBasePath: string;
+  public copyrightShort: string;
 
   constructor(private _elemRef: ElementRef,
               private _rendererRef: Renderer2,
@@ -62,9 +65,11 @@ export class LightboxComponent implements OnInit, AfterViewInit, OnDestroy, OnIn
               private _lightboxWindowRef: LightboxWindowRef,
               private _sanitizer: DomSanitizer,
               private _fullScreenService: FullscreenService,
-              private appConstants: AppConstants) {
+              private appConstants: AppConstants,
+              protected dialog: MatDialog) {
     // initialize data
     this.photoBasePath = appConstants.PHOTO_BASE_PATH;
+    this.copyrightShort = appConstants.COPYRIGHT_SHORT;
     this.options = this.options || {};
     this.album = this.album || [];
     this.currentImageIndex = this.currentImageIndex || 0;
@@ -149,6 +154,12 @@ export class LightboxComponent implements OnInit, AfterViewInit, OnDestroy, OnIn
       $event.target.classList.contains('lb-close')) {
       this._lightboxEvent.broadcastLightboxEvent({ id: LIGHTBOX_EVENT.CLOSE, data: null });
     }
+  }
+
+  public showCopyright(): void {
+    this.dialog.open(CopyrightNoticeComponent, {
+      width: '600px',
+    });
   }
 
   public nextImage(): void {

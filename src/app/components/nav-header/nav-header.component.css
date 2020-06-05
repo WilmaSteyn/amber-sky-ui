@@ -37,4 +37,18 @@
 
 #headerImg {
   max-width: calc(100% - 60px);
+  background-image: url("/assets/img/banner_a.png");
+  background-repeat: no-repeat;
+  height: 75px;
+}
+
+#logo {
+  font-size: 30px;
+  padding-left: 30px;
+  line-height: 60px;
+}
+
+#logo:hover {
+  text-decoration: none;
+  border-bottom: none;
 }
