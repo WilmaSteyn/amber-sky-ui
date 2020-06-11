@@ -1,0 +1,11 @@
+<div>
+  <a class="lb-close-sml" (click)="close()"></a>
+  <h1>
+    <span class="lb-classification vulnerable animation fadeIn" *ngIf="classification.code === 'VUL'"></span>
+    <span class="lb-classification near-threatened animation fadeIn" *ngIf="classification.code === 'NT'"></span>
+    <span class="lb-classification endangered animation fadeIn" *ngIf="classification.code === 'END'"></span>
+    <span class="lb-classification critical-endangered animation fadeIn" *ngIf="classification.code === 'CR'"></span>
+    {{classification.name}}</h1>
+  <p class="bodyText">{{classification.description}}</p>
+  <p class="bodyText">See <a class="link" href="https://www.iucnredlist.org" target="_blank">The IUCN Red List of Threatened Species</a> for more information.</p>
+</div>

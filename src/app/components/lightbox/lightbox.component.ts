@@ -23,6 +23,7 @@ import {AppConstants} from '../../config/app-constants';
 import {FullscreenService} from '../fullscreen/services/fullscreen.service';
 import {MatDialog} from '@angular/material/dialog';
 import {CopyrightNoticeComponent} from "../copyright-notice/copyright-notice.component";
+import {ClassificationDescriptionComponent} from "../classification-description/classification-description.component";
 
 @Component({
   templateUrl: './lightbox.component.html',
@@ -159,6 +160,16 @@ export class LightboxComponent implements OnInit, AfterViewInit, OnDestroy, OnIn
   public showCopyright(): void {
     this.dialog.open(CopyrightNoticeComponent, {
       width: '600px',
+    });
+  }
+
+  public showClassification(classificationCode: string): void {
+    this.dialog.open(ClassificationDescriptionComponent, {
+      width: '600px',
+      autoFocus: false,
+      data: {
+        classificationCode: classificationCode
+      },
     });
   }
 

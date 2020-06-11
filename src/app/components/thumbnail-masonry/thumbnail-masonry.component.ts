@@ -105,7 +105,7 @@ export class ThumbnailMasonryComponent implements OnInit {
 
   open(index: number): void {
     // open lightbox
-    if (this.screenWidth > 480) {
+    if (this.screenWidth > 870) {
       this.lightbox.open(this.photoList, index);
     } else {
       this.fullScreenService.open(this.photoList, index);

@@ -27,6 +27,7 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import { CopyrightNoticeComponent } from './components/copyright-notice/copyright-notice.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FooterComponent } from './components/footer/footer.component';
+import { ClassificationDescriptionComponent } from './components/classification-description/classification-description.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutUsComponent,
     NavHeaderComponent,
     CopyrightNoticeComponent,
-    FooterComponent
+    FooterComponent,
+    ClassificationDescriptionComponent
   ],
   imports: [
     BrowserModule,

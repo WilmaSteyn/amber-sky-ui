@@ -92,9 +92,9 @@ body {
   }
 }
 
-@media screen and (min-width:481px) and (max-width:730px) {
-  .desktop-view {display:block;}
-  .phone-view {display:none;}
+@media screen and (max-width:730px) {
+  .desktop-view {display:none;}
+  .phone-view {display:block;}
 
   .navButton {
     float:left;
@@ -110,8 +110,8 @@ body {
 
 
 @media screen and (min-width:731px) and (max-width:870px) {
-  .desktop-view {display:block;}
-  .phone-view {display:none;}
+  .desktop-view {display:none;}
+  .phone-view {display:block;}
 
   .navButton {
     float:left;
@@ -157,6 +157,10 @@ body {
 a:hover  {
   border-bottom: 1px solid #EA972E;
   cursor: pointer;
+}
+
+a.link {
+  border-bottom: 1px solid #EA972E;
 }
 
 a {

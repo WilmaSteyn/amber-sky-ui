@@ -1,8 +1,12 @@
 <div class="lb-dataContainer" #dataContainer>
   <div class="lb-data">
     <div class="lb-details">
-          <span class="lb-caption animation fadeIn" [hidden]="!ui.showCaption" [innerHtml]="album[currentImageIndex].title" #caption>
-          </span>
+      <a class="lb-classification vulnerable animation fadeIn" (click)="showClassification('VUL')" *ngIf="album[currentImageIndex].classificationCode === 'VUL'"></a>
+      <a class="lb-classification near-threatened animation fadeIn" (click)="showClassification('NT')" *ngIf="album[currentImageIndex].classificationCode === 'NT'"></a>
+      <a class="lb-classification endangered animation fadeIn" (click)="showClassification('END')" *ngIf="album[currentImageIndex].classificationCode === 'END'"></a>
+      <a class="lb-classification critical-endangered animation fadeIn" (click)="showClassification('CR')" *ngIf="album[currentImageIndex].classificationCode === 'CR'"></a>
+      <span class="lb-caption animation fadeIn" [hidden]="!ui.showCaption" [innerHtml]="album[currentImageIndex].title" #caption>
+      </span>
       <span class="lb-number animation fadeIn" [hidden]="!ui.showPageNumber" #number>{{ content.pageNumber }}</span>
     </div>
     <div class="lb-closeContainer">
@@ -27,6 +31,7 @@
 <div class="lb-dataContainer" [hidden]="ui.showReloader" #dataContainer>
   <div class="lb-data">
     <div class="lb-details-centered">
+      <span class="lb-caption animation fadeIn" *ngIf="isPropertyDefined(album[currentImageIndex].notes)">{{album[currentImageIndex].notes}}</span><br/><br/>
       <span class="lb-caption animation fadeIn" *ngIf="isPropertyDefined(album[currentImageIndex].cameraName) || isPropertyDefined(album[currentImageIndex].lensName)">Equipment: </span>
       <span class="animation fadeIn" *ngIf="isPropertyDefined(album[currentImageIndex].cameraName)">{{album[currentImageIndex].cameraName}}</span>
       <span class="animation fadeIn" *ngIf="isPropertyDefined(album[currentImageIndex].lensName)">| {{album[currentImageIndex].lensName}}</span>

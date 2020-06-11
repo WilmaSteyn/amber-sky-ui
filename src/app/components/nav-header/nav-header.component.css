@@ -27,8 +27,8 @@
 }
 
 .topnav #myLinks {
-  position: absolute;
-  top: 90px;
+  position: fixed;
+  top: 70px;
   z-index: 1;
   right: 10px;
   background-color: #212520;
@@ -51,4 +51,29 @@
 #logo:hover {
   text-decoration: none;
   border-bottom: none;
+}
+
+@media screen and (max-width:730px) {
+  #logo {
+    font-size: 24px;
+    padding-left: 30px;
+    line-height: 60px;
+  }
+}
+
+
+@media screen and (min-width:731px) and (max-width:870px) {
+  #logo {
+    font-size: 30px;
+    padding-left: 30px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (min-width: 871px ) {
+  #logo {
+    font-size: 30px;
+    padding-left: 30px;
+    line-height: 60px;
+  }
 }

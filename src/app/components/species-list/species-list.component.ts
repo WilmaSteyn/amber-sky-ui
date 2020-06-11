@@ -100,7 +100,7 @@ export class SpeciesListComponent implements OnInit, OnDestroy {
   open(photo): void {
     const photos: PhotoDetails[] = [];
     photos.push(photo);
-    if (this.screenWidth > 480) {
+    if (this.screenWidth > 870) {
       this.lightbox.open(photos, 0);
     } else {
       this.fullscreenService.open(photos, 0);

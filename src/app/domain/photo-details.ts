@@ -14,5 +14,5 @@ export class PhotoDetails {
   flashName: string;
   galleryCode: string;
   hidden: number;
-
+  classificationCode: string;
 }
